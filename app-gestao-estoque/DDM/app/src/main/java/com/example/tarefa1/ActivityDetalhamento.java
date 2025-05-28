@@ -1,6 +1,7 @@
 package com.example.tarefa1;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ActivityDetalhamento extends AppCompatActivity {
 
     EditText editTextPesquisarProdutos;
+    Button listarProdutoSair;
     @Override
     protected void onCreate(Bundle saveInstanceState)
     {
@@ -29,6 +31,7 @@ public class ActivityDetalhamento extends AppCompatActivity {
         setContentView(R.layout.activity_detalhamento);
 
         editTextPesquisarProdutos = findViewById(R.id.editTextPesquisarProdutos);
+        listarProdutoSair = findViewById(R.id.listarProdutoSair);
 
         LinearLayout listarProdutosBarraNav = findViewById(R.id.ListarProdutosBarraPesquisa);
         Button listarProdutosBotaoPesquisar = new Button(this);
@@ -58,6 +61,12 @@ public class ActivityDetalhamento extends AppCompatActivity {
 
         listarProdutosBarraNav.addView(listarProdutosBotaoPesquisar);
 
+        listarProdutoSair.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityDetalhamento.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         View view = findViewById(R.id.mainDetalhamento);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainDetalhamento), (v, insets) -> {

@@ -56,14 +56,7 @@
             android:background="@drawable/pesquisar_produtos_text_field"
             />
 
-<!--        <Button-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:text="Pesquisar"-->
-<!--            android:background="@drawable/listagem_produtos_botao_pesquisar"-->
-<!--            android:textColor="@color/white"-->
 
-<!--            />-->
 
 
 
@@ -81,6 +74,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="15dp"
         android:background="@drawable/top_bar_listagem_produtos">
+
+        <Button
+            android:id="@+id/listarProdutoSair"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Sair"
+            android:background="@drawable/listagem_produtos_botao_pesquisar"
+            android:textColor="@color/white"
+
+            />
+
 
 
     </LinearLayout>
