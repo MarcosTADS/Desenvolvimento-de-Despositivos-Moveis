@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(String nome, String senha)
     {
-        if(nome.equals("Teste") && senha.equals("123"))
+        if(nome.equals("Marcos") && senha.equals("123"))
         {
 //            String nomeDoUsuario = editTextName.getText().toString();
             Intent intent = new Intent(MainActivity.this, ActivityBoasVindas.class);
