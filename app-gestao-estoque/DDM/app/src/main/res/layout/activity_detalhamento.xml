@@ -35,6 +35,8 @@
 
     </LinearLayout>
 
+
+
     <LinearLayout
         android:id="@+id/ListarProdutosBarraPesquisa"
         android:layout_width="match_parent"
@@ -56,15 +58,73 @@
             android:background="@drawable/pesquisar_produtos_text_field"
             />
 
-<!--        <Button-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:text="Pesquisar"-->
-<!--            android:background="@drawable/listagem_produtos_botao_pesquisar"-->
-<!--            android:textColor="@color/white"-->
+    </LinearLayout>
 
-<!--            />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ListarProdutosBarraPesquisa">
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginStart="21dp"
+            android:layout_marginVertical="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cod."
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginStart="90dp"
+            android:layout_marginVertical="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Und."
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginVertical="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estq."
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginVertical="5dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ListarProdutosBarraPesquisa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="437dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="35dp"
+            tools:listitem="@layout/recycler_view_layout" />
 
 
     </LinearLayout>
@@ -81,6 +141,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="15dp"
         android:background="@drawable/top_bar_listagem_produtos">
+
+        <Button
+            android:id="@+id/ListaProdutosBotaoSair"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Sair"
+            android:background="@drawable/listagem_produtos_botao_pesquisar"
+            android:textColor="@color/white"
+
+            />
 
 
     </LinearLayout>
